@@ -213,7 +213,21 @@ export const constantRoutes = [
         meta: { title: '用户管理', icon: 'el-icon-user-solid', noCache: true }
       }
     ]
+  },
+  {
+    path: '/safety-point-inspection',
+    component: Layout,
+    redirect: '/safety-point-inspection/index',
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/safety-point-inspection/index'),
+        name: '安全点巡检',
+        meta: { title: '安全点巡检', icont: 'el-icon-user-solid', noCache: true }
+      }
+    ]
   }
+
 ]
 
 /**
